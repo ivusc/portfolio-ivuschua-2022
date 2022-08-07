@@ -55,8 +55,8 @@ const School : NextPage<WithRouterProps> = ({router}) => {
         mb={2}
         >{projectContent.maintitle}</Heading>
         <CustomDivider width={'40%'}/>
-        {projectContent.content.map((project) => (
-          <Project project={project.name} desc={project.desc} title={project.title} sourceHref={project.sourceHref}/>
+        {projectContent.content.map((project,i) => (
+          <Project project={project.name} desc={project.desc} title={project.title} sourceHref={project.sourceHref} key={i}/>
         ))}
         <VStack>
           <CustomButton alignSelf={'center'} size={{base: 'md', md:'lg'}} mb={{base: '2em', md:'5em'}} isProject>Back to Projects 👈</CustomButton>

@@ -14,7 +14,7 @@ const NotFound : NextPage = () => {
       <AnimatedHeading>404</AnimatedHeading>
       <Text fontSize={subtitleFontSize} fontWeight={'extrabold'}>Page Not Found :(</Text>
       <Text fontSize={textFontSize} mb={6}>
-        The page you're looking for does not seem to exist
+        The page you&apos;re looking for does not seem to exist
       </Text>
 
       <NextLink href={'/'}>

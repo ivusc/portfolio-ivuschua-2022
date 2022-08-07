@@ -14,8 +14,8 @@ export const IconGroup : React.FC<IIconGroup> = ({ icons }) => {
   return(
     <HStack justifyContent={'center'} mt={'1.2em'}>
       <SimpleGrid columns={{base: icons.length > 5 ? 4 : icons.length, md: icons.length}} spacing={'1em'}>
-      {icons.map((icon) => (
-        <VStack>
+      {icons.map((icon,i) => (
+        <VStack key={i}>
           <Hide above={'mdsm'}>
             <SmContent title={icon.title} icon={icon.icon} />
           </Hide>

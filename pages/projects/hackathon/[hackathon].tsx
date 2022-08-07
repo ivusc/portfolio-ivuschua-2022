@@ -64,7 +64,7 @@ const Hackathon : NextPage<WithRouterProps> = ({ router }) => {
           />
         </VStack>
         {projectContent.desc.map((desc) => (
-          <Text fontSize={textFontSize} mb={6}>
+          <Text fontSize={textFontSize} mb={6} key={desc}>
             {desc}
           </Text>
         ))}

@@ -11,8 +11,8 @@ export const Checklist : React.FC<IChecklist> = ({takeaways}) => {
   const { textFontSize } = useContext(FontContext);
   return (
     <List spacing={3} mt={{base:'2em', mdsm:'1em'}}>
-      {takeaways?.map((item) => (
-        <ListItem display={'flex'} flexDir={'row'}>
+      {takeaways?.map((item,i) => (
+        <ListItem display={'flex'} flexDir={'row'} key={i}>
           <ListIcon as={MdCheckCircle} color={useColorModeValue('black','white')} w={6} h={6} />
           <Text fontSize={textFontSize}>{item}</Text>
         </ListItem>
