@@ -32,6 +32,7 @@ export const SocialsStack : React.FC = () => {
             href={socialItem.href}
             target={'_blank'}
             rel={"noopener noreferrer"}
+            key={i}
           >
             <Box
               borderRadius={'xl'}
@@ -46,7 +47,6 @@ export const SocialsStack : React.FC = () => {
                 color: 'white'
               }}
               aria-label={socialItem.label}
-              key={i}
             >
               <HStack 
                 bg={useColorModeValue('gray.100','gray.800')} 

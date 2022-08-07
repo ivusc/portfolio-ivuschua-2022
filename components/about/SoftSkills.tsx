@@ -11,8 +11,8 @@ export const SoftSkills : React.FC = () => {
   return (
     <Grid templateColumns={'repeat(4,1fr)'} gap={4}>
       {SOFT_SKILLS_CONTENT.map((item,i) => (
-        <GridItem colSpan={{ base: 4, mdsm: 2, lg: 1 }} w={'100%'} >
-          <Card item={item} key={i}/>
+        <GridItem colSpan={{ base: 4, mdsm: 2, lg: 1 }} w={'100%'} key={i}>
+          <Card item={item}/>
         </GridItem>
       ))}
     </Grid>

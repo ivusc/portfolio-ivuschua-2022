@@ -71,9 +71,8 @@ const Accomplishment = ({content}: {content: Array<IAccomplishmentContent> }) =>
   return (
     <>
       {content.map((item,i) => (
-        <Fade delay={100} direction={'up'} cascade>
+        <Fade delay={100} direction={'up'} key={i} cascade>
           <Box
-            key={i}
             borderRadius={'xl'}
             mt={4}
             px={'4px'}
