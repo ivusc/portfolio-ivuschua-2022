@@ -12,11 +12,11 @@ import {
 import { FaReact } from 'react-icons/fa';
 import { SiChakraui, SiNextdotjs } from 'react-icons/si';
 
-import { netlifyLogo, netlifyLogoDark } from "../../assets";
 import { Logo } from './Logo';
-import { ChakraImage } from '../../lib';
 import { darkGradient, lightGradient } from '../../constants';
 import { SocialsGroup } from './SocialsGroup';
+import { ChakraImage } from '../../lib';
+import { netlifyLogo, netlifyLogoDark } from '../../assets';
 
 
 interface IFooter {
@@ -63,10 +63,12 @@ export const Footer: React.FC<IFooter> = ({display}) => {
         <Box width={'50%'} textAlign={'center'}>
           Deployed with
           <chakra.a 
-            href={'https://www.netlify.com/'}
+            href={'https://netlify.com/'}
             target={'_blank'}
             rel={"noopener noreferrer"}>
-            <ChakraImage src={netlifylogo} width="100%" height="100%"/>
+            <Box w={{ base: ' 70%', md:'100%'}} h={'auto'}>
+              <ChakraImage src={netlifylogo} width="100%" height="100%"/>
+            </Box>
           </chakra.a>
         </Box>
         <Text>&copy;  2022</Text>
@@ -78,15 +80,18 @@ export const Footer: React.FC<IFooter> = ({display}) => {
           <Text>Made with:</Text>
           <IconGroup/>
         </VStack>
-        <Box width={'full'} textAlign={'center'}>
-          Deployed with
+        <VStack width={'full'} textAlign={'center'} justifyContent={'center'}>
+          <Text>Deployed with</Text>
           <chakra.a 
-            href={'https://www.netlify.com/'}
+            w={'30%'}
+            href={'https://netlify.com/'}
             target={'_blank'}
             rel={"noopener noreferrer"}>
-            <ChakraImage src={netlifylogo} w={'50%'} h={'50%'}/>
+            <Box h={'auto'}>
+              <ChakraImage src={netlifylogo} width="100%" height="100%"/>
+            </Box>
           </chakra.a>
-        </Box>
+        </VStack>
       </VStack>
     </Container>
   )
