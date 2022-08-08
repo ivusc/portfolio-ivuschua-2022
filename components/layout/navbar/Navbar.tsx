@@ -39,14 +39,8 @@ export const Navbar: React.FC = () => {
          py={{ base: 3 , md: 5}}
          px={{ base: 2, md: 10 }}
          align={{base:'left', md:'center'}}>
-         <Flex
-           flex={{ base: 1, md: 'auto' }}
-           ml={{ base: -15 }}
-           display={{ base: 'flex', md: 'none' }}
-           justify={{base:'center', md:'center'}}>
-         </Flex>
-         <Flex ml={{ base: '-7em', md: 0 }} flex={{ base: 1 }} justify={{ base: 'start', md: 'start' }}>
-          <Logo plBase={2} plMd={2} pyMd={2} pyBase={1} fontFamily={'heading'} fontSm={'lg'} fontMd={'xl'} fontLg={'2xl'}/>
+         <Flex ml={{ base: '2em', mdsm: '2em', md: 0 }} flex={{ base: 1 }} justify={{base:'start', md: 'center'}}>
+          <Logo plBase={2} plMd={0} pyMd={2} pyBase={1} fontFamily={'heading'} fontSm={'lg'} fontMd={'xl'} fontLg={'2xl'}/>
            <Flex pt={{base: 0, md: 3}} display={{base: 'none', md:'flex'}} flex={{base:0, md:1}} justify={{base: 'center', md:'end'}} ml={10} px={{base:0, md:2}}>
              <DesktopNav />
            </Flex>
@@ -81,7 +75,7 @@ export const Navbar: React.FC = () => {
               size={'lg'} variant={'ghost'}
               colorScheme={'indigo'}
               as={chakra.a}
-              href={'https://github.com/ivusc/Portfolio-Ivus-Chua'}
+              href={'https://github.com/ivusc/portfolio-ivuschua'}
               target={'_blank'}
               rel={"noopener noreferrer"}
             >

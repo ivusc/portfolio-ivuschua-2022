@@ -11,7 +11,7 @@ import { IProgressContent, PROGRESS_CONTENT, lightGradient, darkGradient } from 
 
 export const TechnicalSkills : React.FC = () => {
   return (
-    <Grid templateColumns='repeat(3,1fr)' gap={{base: 4, md: 2}} w={'80%'} pt={'1em'} alignSelf={'center'}>
+    <Grid templateColumns='repeat(3,1fr)' gap={{base: 4, md: 2}} w={{base: '90%', md: '80%'}} pt={'1em'} alignSelf={'center'}>
       {PROGRESS_CONTENT.map((progressItem,i) => (
         <ProgressItem progressItem={progressItem} key={i}/>
       ))}
@@ -25,7 +25,7 @@ const ProgressItem = ({progressItem}: {progressItem: IProgressContent}) => (
       w="100%" 
       colSpan={{base:1, lg:1}} 
       display={'flex'} 
-      justifyContent={{base:'start', lg:'start'}} 
+      justifyContent={'start'} 
       key={progressItem.title}
     >
       <Text fontSize={{base:'lg', lg:'xl'}} fontWeight={'semibold'}>{progressItem.title}</Text>

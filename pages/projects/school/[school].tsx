@@ -59,7 +59,7 @@ const School : NextPage<WithRouterProps> = ({router}) => {
           <Project project={project.name} desc={project.desc} title={project.title} sourceHref={project.sourceHref} key={i}/>
         ))}
         <VStack>
-          <CustomButton alignSelf={'center'} size={{base: 'md', md:'lg'}} mb={{base: '2em', md:'5em'}} isProject>Back to Projects 👈</CustomButton>
+          <CustomButton p={4} alignSelf={'center'} size={{base: 'md', mdsm:'md', md:'lg'}} mb={{base: '2em', md:'5em'}} isProject>Back to Projects 👈</CustomButton>
         </VStack>
       </Section>
     </>

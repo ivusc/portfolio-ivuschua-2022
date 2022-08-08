@@ -25,7 +25,7 @@ const Home: NextPage = () => {
   const { headingFontSize, subtitleFontSize } = useContext(FontContext);
   return (
     <Section delay={0.1}>
-      <Grid ml={{base: 5, md: 12}} templateColumns='repeat(2, 1fr)' overflow={'hidden'} mt={{base:0, lg:'4em'}} gap={'0.25em'}>
+      <Grid ml={{base: 4, md: 12}} templateColumns='repeat(2, 1fr)' overflow={'hidden'} mt={{base:0, lg:'4em'}} mb={{base: '4em', lg: 0}} gap={'0.25em'}>
         <GridItem display={{base:'flex', lg:'none'}} colSpan={{base: 2, lg: 1}} mb={6}>
           <LazyVoxel />
         </GridItem>

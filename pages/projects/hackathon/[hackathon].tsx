@@ -79,7 +79,7 @@ const Hackathon : NextPage<WithRouterProps> = ({ router }) => {
           </VStack>
         )}
         <VStack mt={'2em'}>
-          <CustomButton alignSelf={'center'} size={{base: 'md', md:'lg'}} mb={{base: '2em', md:'5em'}} isProject>Back to Projects 👈</CustomButton>
+          <CustomButton p={4} alignSelf={'center'} size={{base: 'md', md:'lg'}} mb={{base: '2em', md:'5em'}} isProject>Back to Projects 👈</CustomButton>
         </VStack>
       </Section>
     </>

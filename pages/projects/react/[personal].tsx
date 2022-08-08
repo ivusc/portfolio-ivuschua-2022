@@ -92,7 +92,7 @@ const PersonalProjects : NextPage<WithRouterProps> = ({router}) => {
           apiHref={projectContent.apiHref ? projectContent.apiHref : undefined}
         />
         <VStack>
-          <CustomButton alignSelf={'center'} size={{base: 'md', md:'lg'}} mb={{base: '2em', md:'5em'}} isProject>Back to Projects 👈</CustomButton>
+          <CustomButton p={4} alignSelf={'center'} size={{base: 'md', md:'lg'}} mb={{base: '2em', md:'5em'}} isProject>Back to Projects 👈</CustomButton>
         </VStack>
       </Section>
     </>

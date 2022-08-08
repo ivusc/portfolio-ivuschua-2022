@@ -15,8 +15,8 @@ import { SiChakraui, SiNextdotjs } from 'react-icons/si';
 import { Logo } from './Logo';
 import { darkGradient, lightGradient } from '../../constants';
 import { SocialsGroup } from './SocialsGroup';
-import { ChakraImage } from '../../lib';
 import { netlifyLogo, netlifyLogoDark } from '../../assets';
+import Image from 'next/image';
 
 
 interface IFooter {
@@ -50,7 +50,7 @@ export const Footer: React.FC<IFooter> = ({display}) => {
         fontLg={'xl'}
         />
       {/* MD Footer */}
-      <VStack display={{base:'none', md: 'flex'}} alignItems={'center'} spacing={1}>
+      <VStack width={'50%'} display={{base:'none', md: 'flex'}} alignItems={'center'} spacing={1}>
         <Text
             py={{ base: "2", sm: "0" }}
             color="gray.800"
@@ -60,17 +60,16 @@ export const Footer: React.FC<IFooter> = ({display}) => {
             Made with Next JS &amp; Chakra UI
         </Text>
         <IconGroup/>
-        <Box width={'50%'} textAlign={'center'}>
-          Deployed with
+        <VStack width={'100%'} textAlign={'center'}>
+          <Text>Deployed with</Text>
           <chakra.a 
             href={'https://netlify.com/'}
             target={'_blank'}
+            w={{ base: ' 30%', md:'20%'}}
             rel={"noopener noreferrer"}>
-            <Box w={{ base: ' 70%', md:'100%'}} h={'auto'}>
-              <ChakraImage src={netlifylogo} width="100%" height="100%"/>
-            </Box>
+            <Image src={netlifylogo}/>
           </chakra.a>
-        </Box>
+        </VStack>
         <Text>&copy;  2022</Text>
       </VStack>
       <SocialsGroup />
@@ -83,14 +82,13 @@ export const Footer: React.FC<IFooter> = ({display}) => {
         <VStack width={'full'} textAlign={'center'} justifyContent={'center'}>
           <Text>Deployed with</Text>
           <chakra.a 
-            w={'30%'}
+            w={{base: '30%', mdsm: '20%', md: '30%'}}
             href={'https://netlify.com/'}
             target={'_blank'}
             rel={"noopener noreferrer"}>
-            <Box h={'auto'}>
-              <ChakraImage src={netlifylogo} width="100%" height="100%"/>
-            </Box>
+            <Image src={netlifylogo}/>
           </chakra.a>
+          <Text>&copy; 2022</Text>
         </VStack>
       </VStack>
     </Container>

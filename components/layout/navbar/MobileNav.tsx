@@ -15,7 +15,6 @@ import {
   VisuallyHidden
 } from "@chakra-ui/react";
 import Link from "next/link";
-import NextLink from 'next/link';
 import { FaGithub } from "react-icons/fa";
 
 import { darkGradient, INavItem, lightGradient, NAV_ITEMS } from "../../../constants";
@@ -71,7 +70,7 @@ export const MobileDrawer: React.FC<IMobileDrawer> = ({mobileNavOpen, toggleMobi
                 ))}
                 <Box 
                   as={chakra.a}
-                  href={'https://github.com/ivusc/Portfolio-Ivus-Chua'}
+                  href={'https://github.com/ivusc/portfolio-ivuschua'}
                   target={'_blank'}
                   rel={"noopener noreferrer"}
                   display={'flex'}
@@ -103,7 +102,8 @@ const MobileNavItem: React.FC<IMobileNavItems> = ({ label, href, onClose }) => {
           justify={'space-between'}
           align={'center'}
           _hover={{
-            textDecoration: 'none',
+            textDecoration: 'underline',
+            textUnderlineOffset: 2,
           }}>
           <Text
             fontWeight={600}

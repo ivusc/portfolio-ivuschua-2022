@@ -2,8 +2,7 @@ import { Badge, Box, Flex, Grid, GridItem, Heading, HStack, SimpleGrid, Text, us
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { useContext } from 'react'
-import { AttentionSeeker, Fade } from 'react-awesome-reveal'
-import { FadeDirection } from 'react-awesome-reveal/dist/components/Fade'
+import { Fade } from 'react-awesome-reveal'
 import { 
   cardLightGradient,
   darkGradient,
@@ -20,7 +19,7 @@ interface ICard{
 }
 
 export const Cards : React.FC<ICard> = ({category}) => {
-  const animationDirection: FadeDirection = useBreakpointValue({base: 'left', md: 'up'});
+  const animationDirection = useBreakpointValue({base: 'left', md: 'up'});
   let columns: number = 0;
   let content : Array<IProjectCardContent & IPersonalProject> = [];
 
@@ -37,6 +36,7 @@ export const Cards : React.FC<ICard> = ({category}) => {
 
   if ( columns > 3 && columns % 2 === 0){
     return (
+      //@ts-ignore
       <Fade delay={100} damping={5}>
         <VStack>
           <Box w={{base: '90%', mdsm: 'full', md:'100%', lg:'65%'}}>
@@ -52,7 +52,8 @@ export const Cards : React.FC<ICard> = ({category}) => {
   }
 
   return (
-    <Fade delay={200} damping={5} direction={animationDirection}>
+    //@ts-ignore
+    <Fade damping={5} direction={animationDirection}>
       <VStack>
         <Box w={{base: '90%', mdsm: 'full', md:'100%', lg:'90%'}}>
         <SimpleGrid columns={{sm: 1, md: columns}} mt={6} gap={8}>

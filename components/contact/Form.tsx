@@ -54,16 +54,16 @@ export const Form : React.FC= () => {
 
   const { textFontSize } = useContext(FontContext)
   return (
-    <form name="contact" action="/success" method="POST" data-netlify="true">
+    <form name="contact" method="POST" data-netlify="true">
     <input type="hidden" name="form-name" value="contact" />
       <VStack mt={'5em'} maxW={{ md: '80%'}}>
         <FormControl>
           <FormLabel fontSize={textFontSize} fontFamily={'poppins'}>Name</FormLabel>
-          <Input name={'name'} type='text' placeholder={'Enter name'} size={{base: 'md', md: 'lg'}} onChange={(e) => setUser({ ...user, name: e.target.value})}/>
+          <Input name={'name'} type='text' placeholder={'Enter name'} size={'lg'} onChange={(e) => setUser({ ...user, name: e.target.value})}/>
           <FormLabel fontSize={textFontSize} mt={5} fontFamily={'poppins'}>Email address</FormLabel>
-          <Input name={'email'} type='email' placeholder={'Enter Email'} size={{base: 'md', md: 'lg'}} onChange={(e) => setUser({ ...user, email: e.target.value})}/>
+          <Input name={'email'} type='email' placeholder={'Enter Email'} size={'lg'} onChange={(e) => setUser({ ...user, email: e.target.value})}/>
           <FormLabel fontSize={textFontSize} mt={5} fontFamily={'poppins'}>Message</FormLabel>
-          <Textarea name={'message'} placeholder='Here is a sample placeholder' size={'lg'} onChange={(e) => setUser({ ...user, message: e.target.value})}/>
+          <Textarea name={'message'} placeholder='Enter your message' size={'lg'} onChange={(e) => setUser({ ...user, message: e.target.value})}/>
           <VStack>
             <CustomButton 
               mt={'2em'} 

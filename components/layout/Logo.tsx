@@ -3,11 +3,11 @@ import {
   Text, 
   useColorModeValue 
 } from "@chakra-ui/react";
+import Image from "next/image";
 import Link from "next/link";
 
 import { logo } from "../../assets";
 import { darkGradient, lightGradient } from "../../constants";
-import { ChakraImage } from "../../lib";
 
 
 interface ILogo {
@@ -43,7 +43,9 @@ export const Logo: React.FC<ILogo> = ({plBase, pyBase, pxBase, pyMd, plMd, fontS
         cursor: 'pointer',
         bg:useColorModeValue(lightGradient,darkGradient),
       }}>
-      <ChakraImage src={logo} w={8} h={8} mr={1}/>
+      <Box w={8} h={8} mr={1}>
+        <Image src={logo}/>
+      </Box>
       {/* <Box display={{base:'inherit', md:'inherit'}} minW={{base: 'full', md:'fit-content'}}> */}
         <Text
           pt={{base: 1, md:1}}

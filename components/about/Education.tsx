@@ -27,10 +27,10 @@ const SmContent = () => (
       <Text fontWeight={600} fontFamily={'poppins'} fontSize={'xl'} color={useColorModeValue('indigo.700','indigo.100')}>
         {item.school} :
       </Text>
-      <Text fontSize={'lg'} fontWeight={'bold'}>
+      <Text fontSize={'xl'} fontWeight={'bold'}>
         {item.desc}
       </Text>
-      <Text fontSize={'lg'} fontWeight={'semibold'} mb={8}>
+      <Text fontSize={'lg'} fontWeight={'medium'} mb={8}>
         {item.duration}
       </Text>
     </Box>

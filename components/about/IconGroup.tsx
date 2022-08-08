@@ -19,7 +19,7 @@ const MobileStack = () => (
   <Grid templateColumns={'repeat(4,1fr)'} mt={6}>
     {WEB_DEV_CONTENT.map((item:IWebDevContent) => (
       <Tooltip label={item.title} fontSize={'md'} hasArrow bg={'gray.700'} color={'white'} key={item.title}>
-        <GridItem colSpan={1}>
+        <GridItem colSpan={1} display={'flex'} flexDir={'row'} justifyContent={'center'}>
           <span>
             <Icon 
               as={item.icon} 
