@@ -8,7 +8,7 @@ import { FaCode, FaInfoCircle } from 'react-icons/fa';
 import { edssProject } from '../../../assets';
 import { Carousel, CustomButton, CustomDivider, GradientHeading, Section } from '../../../components';
 import { AV_CONTENT, ECCOMMERCE_CONTENT, IProjectContent, ISingleProject, OTHER_PROJECT_CONTENT, SMART_DOOR_CONTENT } from '../../../constants';
-import { FontContext } from '../../../context/FontSize';
+import { FontContext } from '../../../context/FontContext';
 import { ChakraImage } from '../../../lib';
 
 const School : NextPage<WithRouterProps> = ({router}) => {

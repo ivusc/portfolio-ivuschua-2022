@@ -1,6 +1,6 @@
 import { Heading, HeadingProps, useBreakpointValue } from "@chakra-ui/react";
 import React, { useContext } from "react";
-import { FontContext } from "../../context/FontSize";
+import { FontContext } from "../../context/FontContext";
 
 interface IGradientHeading extends HeadingProps{
   children: string;

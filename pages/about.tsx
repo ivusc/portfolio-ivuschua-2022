@@ -16,14 +16,14 @@ import { Fade, Slide } from 'react-awesome-reveal';
 import { profilePic, profilePicDark } from '../assets';
 import { CustomDivider, Education, IconGroup, Section, SoftSkills, TechnicalSkills } from '../components';
 import { DESCRIPTION } from '../constants';
-import { FontContext } from '../context/FontSize';
-import { ChakraImage } from '../lib';
+import { FontContext } from '../context/FontContext';
 
 const About: NextPage = () => {
   const animationDirection = useBreakpointValue({ base: 'left', md: 'up'});
   const { headingFontSize, subtitleFontSize, textFontSize } = useContext(FontContext);
   const photo = useColorModeValue(profilePic, profilePicDark);
   const mortarboard = useColorModeValue('/gif/education_light.gif', '/gif/education.gif');
+  const briefcase = useColorModeValue('/gif/work_light.gif','/gif/work.gif')
   const gifSize = useBreakpointValue({ base: '300', md: '450'});
 
   return (
@@ -74,12 +74,12 @@ const About: NextPage = () => {
           <Heading variant={'section-title'} fontSize={headingFontSize} pt={'1.2em'} pb={2}>Education</Heading>
           <CustomDivider width={'15%'}/>
           {/* @ts-ignore */}
-          <Slide delay={1000}>
+          <Fade delay={200}>
             <VStack spacing={6}>
               <Image src={mortarboard} width={gifSize} height={gifSize} unoptimized={true}/>
               <Education />  
             </VStack>
-          </Slide>
+          </Fade>
         </Flex>
       </Section>
     </>

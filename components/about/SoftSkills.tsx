@@ -4,7 +4,7 @@ import {
 import React, { useContext } from 'react';
 
 import { ISoftSkills, SOFT_SKILLS_CONTENT, lightGradient, darkGradient } from '../../constants';
-import { FontContext } from '../../context/FontSize';
+import { FontContext } from '../../context/FontContext';
 import { CustomButton } from '../CustomButton';
 
 export const SoftSkills : React.FC = () => {

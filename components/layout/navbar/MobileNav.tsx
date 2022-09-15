@@ -95,7 +95,7 @@ export const MobileDrawer: React.FC<IMobileDrawer> = ({mobileNavOpen, toggleMobi
 const MobileNavItem: React.FC<IMobileNavItems> = ({ label, href, onClose }) => {
    return (
      <Stack spacing={4} _hover={{cursor: 'pointer'}}>
-      <Link href={href ?? '#'}>
+      <Link href={href ?? '#'} scroll={false}>
         <Flex
           py={2}
           onClick={onClose}

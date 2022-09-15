@@ -16,8 +16,8 @@ const Voxel : React.FC = () => {
   const [target] = useState(new THREE.Vector3(-0.5, 1.2, 0))
   const [initialCameraPosition] = useState(
     new THREE.Vector3(
-      20 * Math.sin(0.2 * Math.PI),
-      10,
+      5 * Math.sin(0.2 * Math.PI),
+      5,
       20 * Math.cos(0.2 * Math.PI)
     )
   )
@@ -65,16 +65,29 @@ const Voxel : React.FC = () => {
       camera.position.copy(initialCameraPosition)
       camera.lookAt(target)
       setCamera(camera)
+      
+      const al = new THREE.AmbientLight(0xaaaaaa, 0.3);
+      scene.add(al);
 
-      const ambientLight = new THREE.AmbientLight(0xcccccc, 1)
-      scene.add(ambientLight)
+      const dl = new THREE.DirectionalLight(0xbbbbbb, 0.7);
+      dl.position.set(2,2,0);
+      // //const dlHelper = new THREE.DirectionalLightHelper(dl, 3);
+      scene.add(dl);
+
+      const pl1 = new THREE.PointLight(0xffffff, 1, 8, 2);
+      pl1.position.set(0,2,0);
+      scene.add(pl1);
+
+      const pl2 = new THREE.PointLight(0xffffff, 1, 8, 2);
+      pl2.position.set(-2,2,0);
+      scene.add(pl2);
 
       const controls = new OrbitControls(camera, renderer.domElement)
       controls.autoRotate = true
       controls.target = target
       setControls(controls)
 
-      loadGLTFModel(scene, '/dog.glb', {
+      loadGLTFModel(scene, '/logo.glb', {
         receiveShadow: false,
         castShadow: false
       }).then(() => {
@@ -91,7 +104,8 @@ const Voxel : React.FC = () => {
 
         if (frame <= 100) {
           const p = initialCameraPosition
-          const rotSpeed = -easeOutCirc(frame / 120) * Math.PI * 20
+          //const rotSpeed = 10;
+          const rotSpeed = -easeOutCirc(frame / 120) * Math.PI * 10;
 
           camera.position.y = 10
           camera.position.x =
@@ -107,7 +121,6 @@ const Voxel : React.FC = () => {
       }
 
       return () => {
-        console.log('unmount')
         cancelAnimationFrame(req)
         renderer.dispose()
       }

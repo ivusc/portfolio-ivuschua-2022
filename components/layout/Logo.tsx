@@ -25,7 +25,7 @@ interface ILogo {
 }
 
 export const Logo: React.FC<ILogo> = ({plBase, pyBase, pxBase, pyMd, plMd, fontSm, fontMd, fontLg, fontFamily, fontWeight='semibold', onClose}:ILogo) => (
-  <Link href={'/'}>
+  <Link href={'/'} scroll={false}>
     <Box 
       display={'flex'}
       flexDir={'row'}

@@ -3,7 +3,7 @@ import { NextPage } from 'next'
 import Head from 'next/head'
 import React, { useContext } from 'react'
 import { Cards, CustomDivider, Section } from '../../components'
-import { FontContext } from '../../context/FontSize'
+import { FontContext } from '../../context/FontContext'
 
 const Projects: NextPage = () => {
   const { headingFontSize, bigTitleFontSize } = useContext(FontContext);

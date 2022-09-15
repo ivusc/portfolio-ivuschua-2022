@@ -8,7 +8,7 @@ import Image from 'next/image';
 import React, { useContext } from 'react';
 
 import { Section, CustomDivider, AccomplishmentList } from '../components';
-import { FontContext } from '../context/FontSize';
+import { FontContext } from '../context/FontContext';
 
 const Accomplishments: NextPage = () => {
   const { headingFontSize, titleFontSize } = useContext(FontContext);

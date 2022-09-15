@@ -1,6 +1,6 @@
 import { FormControl, FormLabel, Input, Textarea, useBreakpointValue, useToast, VStack } from '@chakra-ui/react'
 import React, { useContext, useState } from 'react'
-import { FontContext } from '../../context/FontSize'
+import { FontContext } from '../../context/FontContext'
 import { CustomButton } from '../CustomButton'
 
 interface IUser{

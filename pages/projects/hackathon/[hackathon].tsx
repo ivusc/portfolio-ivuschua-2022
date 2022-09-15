@@ -6,7 +6,7 @@ import React, { useContext } from 'react'
 import { FaCode, FaInfoCircle } from 'react-icons/fa';
 import { Carousel, CustomButton, CustomDivider, Section } from '../../../components';
 import { HCKX_CONTENT, IHackathonProject, INTUITION_CONTENT, SSA_CONTENT } from '../../../constants';
-import { FontContext } from '../../../context/FontSize';
+import { FontContext } from '../../../context/FontContext';
 
 const Hackathon : NextPage<WithRouterProps> = ({ router }) => {
   const { headingFontSize, textFontSize } = useContext(FontContext);

@@ -8,7 +8,7 @@ import { IconType } from 'react-icons';
 import { FaInfoCircle, FaQuoteLeft } from 'react-icons/fa';
 import { Carousel, Checklist, CustomButton, CustomDivider, GradientHeading, ProjectLinks, ProjectStackIcons, Section } from '../../../components';
 import { BLOG_APP_CONTENT, CRYPTOKET_CONTENT, ICryptoketContent, FILMPIRE_CONTENT, IReactProject, LIBRARY_APP_CONTENT } from '../../../constants';
-import { FontContext } from '../../../context/FontSize';
+import { FontContext } from '../../../context/FontContext';
 
 const PersonalProjects : NextPage<WithRouterProps> = ({router}) => {
   const { headingFontSize, textFontSize } = useContext(FontContext);

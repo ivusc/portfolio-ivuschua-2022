@@ -23,6 +23,7 @@ import { MobileDrawer } from './MobileNav';
 import { ThemeButton } from '../ThemeButton';
 import { ChakraNextLink } from '../../../lib';
 import { Logo } from '../Logo';
+import Link from 'next/link';
  
 export const Navbar: React.FC = () => {
    const { isOpen: mobileNavOpen, onToggle: toggleMobileNav } = useDisclosure();
@@ -32,10 +33,9 @@ export const Navbar: React.FC = () => {
      <Box position={'sticky'} top={0} as="nav" w="100%" zIndex={10}>
        <Flex
         mx={{base:0, md:4}}
-        //bg={'undefined'}
         bg={useColorModeValue('gray.50', 'gray.900')}
          color={useColorModeValue('gray.600', 'white')}
-         minH={'60px'}
+         minH={'40px'}
          py={{ base: 3 , md: 5}}
          px={{ base: 2, md: 10 }}
          align={{base:'left', md:'center'}}>
@@ -108,19 +108,22 @@ export const Navbar: React.FC = () => {
          <Box key={navItem.label}>
            <Popover trigger={'hover'} placement={'bottom-start'}>
              <PopoverTrigger>
-              <ChakraNextLink
-                p={2}
-                href={navItem.href ?? '#'}
-                fontSize={'md'}
-                fontWeight={500}
-                color={linkColor}
-                _hover={{
-                  textDecoration: 'underline 3px',
-                  textUnderlineOffset: 2,
-                  color: linkHoverColor,
-                }}>
-                {navItem.label}
-              </ChakraNextLink>
+              <Link href={navItem.href ?? '#'} scroll={false}>
+                <chakra.a
+                  p={3}
+                  fontSize={'md'}
+                  fontWeight={500}
+                  color={linkColor}
+                  _hover={{
+                    textDecoration: 'underline 3px',
+                    textUnderlineOffset: 2,
+                    color: linkHoverColor,
+                    cursor: 'pointer'
+                  }}
+                >
+                  {navItem.label}
+                </chakra.a>
+              </Link>
              </PopoverTrigger>
            </Popover>
          </Box>

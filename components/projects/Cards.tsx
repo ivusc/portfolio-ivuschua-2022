@@ -12,7 +12,7 @@ import {
   PERSONAL_PROJECTS, 
   SCHOOL_PROJECTS_CARD_CONTENT 
 } from '../../constants'
-import { FontContext } from '../../context/FontSize'
+import { FontContext } from '../../context/FontContext'
 
 interface ICard{
   category: string;
@@ -70,7 +70,7 @@ export const Cards : React.FC<ICard> = ({category}) => {
 const Card = ({project}: {project: IProjectCardContent & IPersonalProject}) => {
   const { subtitleFontSize, smallFontSize } = useContext(FontContext);
   return (
-    <Link href={project.href}>
+    <Link href={project.href} scroll={false}>
       <Box 
         borderWidth={'3px'} 
         borderColor={useColorModeValue('indigo.700','gray.400')} 

@@ -13,7 +13,7 @@ import React, { useContext } from 'react';
 import { FiChevronRight } from 'react-icons/fi';
 
 import { AnimatedHeading, ButtonLinks, CustomButton, Section, VoxelLoader } from '../components';
-import { FontContext } from '../context/FontSize';
+import { FontContext } from '../context/FontContext';
 
 
 const LazyVoxel = dynamic(() => import('../components/home/Voxel'), {

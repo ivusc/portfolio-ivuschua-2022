@@ -21,7 +21,7 @@ import {
   SEC_ACADEMIC_ACHIEVEMENTS,
   SEC_CCA_ACHIEVEMENTS, 
 } from '../../constants';
-import { FontContext } from '../../context/FontSize';
+import { FontContext } from '../../context/FontContext';
 
 interface IAccomplishmentList {
   level: string;
@@ -71,6 +71,7 @@ const Accomplishment = ({content}: {content: Array<IAccomplishmentContent> }) =>
   return (
     <>
       {content.map((item,i) => (
+        //@ts-ignore
         <Fade delay={100} direction={'up'} key={i} cascade>
           <Box
             borderRadius={'xl'}

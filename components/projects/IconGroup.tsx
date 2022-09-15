@@ -2,7 +2,7 @@ import { Hide, HStack, Icon, SimpleGrid, Text, Tooltip, useColorModeValue, VStac
 import React,{ useContext } from "react";
 import { IconType } from "react-icons";
 import { darkGradient, IProjectStack, lightGradient } from "../../constants";
-import { FontContext } from "../../context/FontSize";
+import { FontContext } from "../../context/FontContext";
 
 interface IIconGroup{
   icons: Array<IProjectStack>

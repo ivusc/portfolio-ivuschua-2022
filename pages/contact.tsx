@@ -5,8 +5,7 @@ import Image from 'next/image';
 import React, { useContext } from 'react';
 import { contact } from '../assets';
 import { CustomDivider, Form, Section, SocialsStack } from '../components';
-import { FontContext } from '../context/FontSize';
-import { ChakraImage } from '../lib';
+import { FontContext } from '../context/FontContext';
 
 const Contact: NextPage = () => {
   const { headingFontSize } = useContext(FontContext);

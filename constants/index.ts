@@ -22,7 +22,6 @@ import {
   blogLanding, blogLightMode, blogCreate, blogDetails, blogProfile, 
   libraryLanding, libraryPopular, libraryBookDesc, libraryCrowdIndication,
 } from "../assets";
-import React from "react";
 
 
 //GENERAL STYLES

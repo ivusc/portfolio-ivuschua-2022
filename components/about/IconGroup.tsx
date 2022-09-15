@@ -29,6 +29,7 @@ const MobileStack = () => (
               p={2}
               rounded={'xl'}
               _hover={{
+                translateY: '-2px',
                 _dark: {
                   bg: darkGradient,
                   color: 'white',

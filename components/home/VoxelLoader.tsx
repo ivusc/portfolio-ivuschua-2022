@@ -7,14 +7,13 @@ export const VoxelContainer = forwardRef(({ children }, ref ) => (
   <Box
     //@ts-ignore
     ref={ref}
-    className="voxel-dog"
     m="auto"
     mt={['-20px', '-60px', '-120px']}
     mb={['-40px', '-140px', '-200px']}
-    w={[280, 480, 640]}
-    h={[280, 480, 640]}
+    w={[280, 480, 600]}
+    h={[280, 480, 600]}
     position="relative"
-    top={{base:'0.5em',md:'2em'}}
+    top={{base:'0.5em',md:'3em'}}
     right={{base: 0, md: '2em'}}
   >
     {children}

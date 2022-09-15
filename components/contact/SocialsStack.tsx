@@ -5,7 +5,7 @@ import { IconType } from 'react-icons'
 import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
 import { MdMail } from 'react-icons/md'
 import { darkGradient, lightGradient } from '../../constants'
-import { FontContext } from '../../context/FontSize'
+import { FontContext } from '../../context/FontContext'
 
 
 interface ISocialsStack{
@@ -26,6 +26,7 @@ export const SocialsStack : React.FC = () => {
   const { textFontSize } = useContext(FontContext);
   return (
     <>
+    {/* @ts-ignore */}
       <Fade direction={'up'} cascade>
         {Socials.map((socialItem,i) => (
           <chakra.a

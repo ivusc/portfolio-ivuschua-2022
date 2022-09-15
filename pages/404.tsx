@@ -4,7 +4,7 @@ import { useContext } from 'react';
 import NextLink from 'next/link';
 
 import { AnimatedHeading, CustomButton } from '../components';
-import { FontContext } from '../context/FontSize';
+import { FontContext } from '../context/FontContext';
 
 const NotFound : NextPage = () => {
   const { subtitleFontSize, textFontSize } = useContext(FontContext);

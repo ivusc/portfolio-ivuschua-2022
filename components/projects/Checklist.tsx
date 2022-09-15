@@ -1,7 +1,7 @@
 import { List, ListIcon, ListItem, Text, useColorModeValue } from '@chakra-ui/react'
 import React, { useContext } from 'react'
 import { MdCheckCircle } from 'react-icons/md'
-import { FontContext } from '../../context/FontSize'
+import { FontContext } from '../../context/FontContext'
 
 interface IChecklist{
   takeaways?: Array<string>;
