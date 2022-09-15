@@ -1,5 +1,7 @@
 # Personal Portfolio - Ivus Chua
 
+![Personal Portfolio](https://i.ibb.co/JHzd3mv/portfolio-min.png)
+
 ### Website Stack
  - Next JS (Using Typescript)
  - Chakra UI
