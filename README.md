@@ -11,7 +11,6 @@
 
 ### Licence
  - GNU General Public License v3.0
- - DO NOT use the 3D model Logo
  - Assets have been removed for privacy.
  - Feel free to use any of the code without contacting me, except for distributing it.
 
