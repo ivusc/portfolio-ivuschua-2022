@@ -22,6 +22,7 @@
 /assets
 /public/dog.glb
 /public/videos
+/public/logo.glb
 
 # debug
 npm-debug.log*
