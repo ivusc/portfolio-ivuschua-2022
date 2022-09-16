@@ -1,6 +1,6 @@
 import { IconType } from "react-icons";
-import { FaAward, FaBook, FaBootstrap, FaBrain, FaClipboardCheck, FaCss3, FaEthereum, FaHtml5, FaKey, FaLaptopCode, FaMapMarkedAlt, FaMicrophone, FaNodeJs, FaReact, FaTrophy, FaWrench } from "react-icons/fa";
-import { SiChakraui, SiDotnet, SiExpress, SiGoogleanalytics, SiMaterialui, SiMongodb, SiNextdotjs, SiNodedotjs, SiPostgresql, SiReact, SiReactrouter, SiRedux, SiSolidity, SiTailwindcss } from "react-icons/si";
+import { FaAward, FaBook, FaBootstrap, FaBrain, FaClipboardCheck, FaCss3, FaEthereum, FaHtml5, FaKey, FaLaptopCode, FaMapMarkedAlt, FaMicrophone, FaNodeJs, FaReact, FaStripe, FaTrophy, FaWrench } from "react-icons/fa";
+import { SiChakraui, SiDotnet, SiExpress, SiFirebase, SiGoogleanalytics, SiMaterialui, SiMongodb, SiNextdotjs, SiNodedotjs, SiPostgresql, SiReact, SiReactrouter, SiRedux, SiSolidity, SiTailwindcss } from "react-icons/si";
 import { RiPlantFill, RiTeamFill } from 'react-icons/ri';
 import { GiRank3, GiStrong } from 'react-icons/gi';
 import { BsFillChatDotsFill } from 'react-icons/bs';
@@ -21,7 +21,9 @@ import {
   cryptoketLanding, cryptoketCreateNFT, cryptoketBuyNFT, 
   blogLanding, blogLightMode, blogCreate, blogDetails, blogProfile, 
   libraryLanding, libraryPopular, libraryBookDesc, libraryCrowdIndication,
+  eshopLanding, eshopAllProducts, eshopProductDetail, eshopCart,
 } from "../assets";
+import React from "react";
 
 
 //GENERAL STYLES
@@ -278,6 +280,13 @@ export const PERSONAL_PROJECTS : Array<IPersonalProject> = [
     image: libraryLanding,
     tags: ['React JS', 'Redux', 'Node JS']
   },
+  {
+    title: 'eShop',
+    desc: 'eShop is an e-commerce clone that is an improved version of my OOPG project.',
+    href: '/projects/react/eshop',
+    image: eshopLanding,
+    tags: ['Next JS', 'Firebase', 'Stripe API']
+  }
 ]
 
 export interface IProjectCarousel{
@@ -680,4 +689,31 @@ export const LIBRARY_APP_CONTENT : IReactProject = {
   ],
   sourceHref: 'https://github.com/ivusc/Library-Website',
   demoHref: 'https://library-website-proid.netlify.app/'
+}
+
+export const ESHOP_IMAGES : Array<IProjectCarousel> = [
+  { image: eshopLanding },
+  { image: eshopAllProducts },
+  { image: eshopProductDetail },
+  { image: eshopCart }
+]
+
+export const ESHOP_CONTENT : IReactProject = {
+  name: 'eShop',
+  desc: `This project is a major revamp of the project that I did in school for OOPG, a ecommerce clone.
+  This time, there are so much more features, such as integration with firebase, the usage of Stripe API,
+  and the ability to view different user profiles and their products.`,
+  stack: [
+    { icon: SiNextdotjs, title: 'Next JS' },
+    { icon: SiReact, title: 'React JS' },
+    { icon: SiChakraui, title: 'Chakra UI' },
+    { icon: FaStripe, title: 'Stripe API' },
+    { icon: SiFirebase, title: 'Firebase' }
+  ],
+  takeaways: [
+    'Learnt to use Firebase SDK for storage, authentication and firestore database',
+    'Learnt to use Stripe API for payments',
+  ],
+  sourceHref: 'https://github.com/ivusc/eShop',
+  demoHref: 'https://eshop.ivusc.vercel.app/'
 }

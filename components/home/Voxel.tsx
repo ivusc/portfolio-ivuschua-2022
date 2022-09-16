@@ -16,8 +16,8 @@ const Voxel : React.FC = () => {
   const [target] = useState(new THREE.Vector3(-0.5, 1.2, 0))
   const [initialCameraPosition] = useState(
     new THREE.Vector3(
-      5 * Math.sin(0.2 * Math.PI),
-      5,
+      20 * Math.sin(0.2 * Math.PI),
+      10,
       20 * Math.cos(0.2 * Math.PI)
     )
   )
@@ -66,21 +66,28 @@ const Voxel : React.FC = () => {
       camera.lookAt(target)
       setCamera(camera)
       
-      const al = new THREE.AmbientLight(0xaaaaaa, 0.3);
+      const al = new THREE.AmbientLight(0xaaaaaa, 0.4);
       scene.add(al);
 
-      const dl = new THREE.DirectionalLight(0xbbbbbb, 0.7);
-      dl.position.set(2,2,0);
-      // //const dlHelper = new THREE.DirectionalLightHelper(dl, 3);
-      scene.add(dl);
+      const dl1 = new THREE.DirectionalLight(0xbbbbbb, 0.7);
+      dl1.position.set(2,2,0);
+      //const dl1Helper = new THREE.DirectionalLightHelper(dl1, 3);
+      scene.add(dl1);
+
+      // const dl2 = new THREE.DirectionalLight(0xbbbbbb, 0.3);
+      // dl2.position.set(-5,-2,-5);
+      // //const dlHelper = new THREE.DirectionalLightHelper(dl2, 3);
+      // scene.add(dl2);
 
       const pl1 = new THREE.PointLight(0xffffff, 1, 8, 2);
+      //const pl1Helper = new THREE.PointLightHelper(pl1, 3);
       pl1.position.set(0,2,0);
       scene.add(pl1);
 
-      const pl2 = new THREE.PointLight(0xffffff, 1, 8, 2);
-      pl2.position.set(-2,2,0);
-      scene.add(pl2);
+      // const pl2 = new THREE.PointLight(0xffffff, 0.2, 8, 2);
+      // //const pl2Helper = new THREE.PointLightHelper(pl2, 3);
+      // pl2.position.set(8,3,-2);
+      // scene.add(pl2);
 
       const controls = new OrbitControls(camera, renderer.domElement)
       controls.autoRotate = true

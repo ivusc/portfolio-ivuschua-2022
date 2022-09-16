@@ -20,6 +20,7 @@ import {
   darkGradient, 
   ECOMMERCE_CARD_CONTENT_DSAG, 
   ECOMMERCE_CARD_CONTENT_OOPG, 
+  ESHOP_IMAGES, 
   FILMPIRE_IMAGES, 
   HCKX_IMAGES, 
   INTUITION_IMAGES, 
@@ -71,6 +72,9 @@ export const Carousel : React.FC<ICarousel> = ({project}) => {
       break;
     case 'libraryapp':
       projectImages = LIBRARY_APP_IMAGES;
+      break;
+    case 'eshop':
+      projectImages = ESHOP_IMAGES;
       break;
     case 'irp2':
       projectImages = SMART_DOOR_IMAGES_IRP2;
